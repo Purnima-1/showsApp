@@ -1,0 +1,19 @@
+.image{
+     z-index: -1;
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  width: 116%;
+  height: 116%;
+  background-size:cover;
+  background-position:center; 
+    background-color: pink;
+  opacity: .3;
+  overflow: hidden;
+  
+}
+
+
+.content{
+  padding:16px;
+}

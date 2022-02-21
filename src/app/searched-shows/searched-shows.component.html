@@ -1,0 +1,47 @@
+<!-- <div class="container display">
+
+  <div class="accordion"  id="accordionExample" >
+    <div *ngFor="let show of shows" class="accordion-item">
+      <h2 class="accordion-header" id="headingOne">
+        <button
+          class="accordion-button"
+          type="button"
+         
+          data-bs-toggle="collapse"
+          data-bs-target="#collapseOne"
+          aria-expanded="true"
+          aria-controls="collapseOne"
+          style="color: blank"
+        >
+           <h5> {{ show.name }} </h5> 
+           
+          
+        </button>
+      </h2>
+      <div
+        id="collapseOne"
+        class="accordion-collapse collapse"
+        aria-labelledby="headingOne"
+        data-bs-parent="#accordionExample"
+      >
+        <div class="container"><h5 class="accordion-body">Airs at: {{ show.schedule }}</h5>
+        <p>Language: {{show.language}}</p> </div>
+      </div>
+    </div>
+  </div>
+</div>
+ -->
+
+  <!-- <mat-accordion *ngFor="let show of shows"> -->
+    <mat-expansion-panel hideToggle>
+      <mat-expansion-panel-header>
+        <mat-panel-title>
+          Show:{{shows.name}}
+        </mat-panel-title>
+        <mat-panel-description>
+          Language: {{shows.language}}
+        </mat-panel-description>
+      </mat-expansion-panel-header>
+      <p>Summary: {{shows.summary}}</p>
+    </mat-expansion-panel>
+
