@@ -10,11 +10,11 @@ import { SearchedShowService } from '../searched-show.service';
   styleUrls: ['./searched-shows.component.css']
 })
 export class SearchedShowsComponent implements OnInit {
-  shows: ISearchedShows
+  shows: ISearchedShows[]
   // panelOpenState = false;
   
   constructor(private searchedShowService: SearchedShowService) { 
-    this.shows = { 
+    this.shows =[ { 
       name: "",
       language: "",
       image: "",
@@ -23,11 +23,11 @@ export class SearchedShowsComponent implements OnInit {
       // network: "",
       // genres: "",
       // schedule: ""
-    }
+    }]
     }
   ngOnInit(): void {
-    this.searchedShowService.getShows('boys')
+    this.searchedShowService.getShows('girls')
     // .subscribe(data => console.log(data))
-    .subscribe(data => this.shows = data)
+     .subscribe(data => this.shows = data)
   }
 }

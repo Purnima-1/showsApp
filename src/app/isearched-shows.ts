@@ -1,6 +1,6 @@
 
 export interface ISearchedShows {
-       name:string
+      name:string
         language: string
         // // genres: []
         // //schedule: string

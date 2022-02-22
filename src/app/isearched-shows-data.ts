@@ -1,18 +1,18 @@
 export interface ISearchedShowsData {
     
    
-       name:string,
+       show:{name:string,
        language: string,
        rating:{
         average: number
        } ,
        image: {
-           medium: string,
+           medium: string | any
        },
        summary: string,
        network: {
            name:string
-       },
+       }}
         //genres: []
     //    schedule: {
     //        time: string,

@@ -11,19 +11,32 @@ export class SearchedShowService {
 
   constructor(private httpClient: HttpClient) { }
   
+//  getShows(name:string){
+//   return this.httpClient.get<ISearchedShowsData>(`https://api.tvmaze.com/singlesearch/shows?q=${name}`).pipe(map(data=> this.transformToISearchedShows(data)))
+//  }
  getShows(name:string){
-  return this.httpClient.get<ISearchedShowsData>(`https://api.tvmaze.com/singlesearch/shows?q=${name}`).pipe(map(data=> this.transformToISearchedShows(data)))
+  return this.httpClient.get<ISearchedShowsData[]>(`https://api.tvmaze.com/search/shows?q=${name}`).pipe(map((data)=> {
+    return data.map((show)=> {return this.transformToISearchedShows(show)})}))
  }
+ private getImage(image: any) {
+  let isImage;
 
-private transformToISearchedShows(data:ISearchedShowsData){
+  return (isImage = image
+    ? image.medium
+    : 'http://static.tvmaze.com/images/no-img/no-img-portrait-text.png');
+}
+
+
+private transformToISearchedShows(shows:ISearchedShowsData){
   return  {
-    name:  data.name,
-    language: data.language,
+    name:  shows.show.name,
+    language: shows.show.language,
     // genres: data.show.genres,
-    // schedule: data.show.schedule.days,
-    rating: data.rating.average,
-    image: data.image.medium,
-    summary: data.summary
+    // // schedule: data.show.schedule.days,
+    rating: shows.show.rating.average,
+    image: this.getImage(shows.show.image),
+    // image: shows.show.image.medium,
+    summary: shows.show.summary
     // network: data.show.network.name
       }
 }

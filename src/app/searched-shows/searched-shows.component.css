@@ -2,3 +2,11 @@
 /* *{
     background-color: lightgrey;
 } */
+.card{
+  width:400px;
+  display:inline-block;
+  margin-left: 10px;
+  margin-top: 40px;
+}
+
+
