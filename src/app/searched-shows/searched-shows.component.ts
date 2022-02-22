@@ -17,16 +17,17 @@ export class SearchedShowsComponent implements OnInit {
     this.shows = { 
       name: "",
       language: "",
-      rating: 0,
       image: "",
       summary: "",
-      network: "",
+      rating: 0
+      // network: "",
       // genres: "",
       // schedule: ""
     }
     }
   ngOnInit(): void {
-    this.searchedShowService.getShows('Gilmore girls')
+    this.searchedShowService.getShows('boys')
+    // .subscribe(data => console.log(data))
     .subscribe(data => this.shows = data)
   }
 }

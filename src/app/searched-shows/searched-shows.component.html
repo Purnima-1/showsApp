@@ -33,6 +33,7 @@
  -->
 
   <!-- <mat-accordion *ngFor="let show of shows"> -->
+    <!-- <div *ngFor = "let elem of shows"> -->
     <mat-expansion-panel hideToggle>
       <mat-expansion-panel-header>
         <mat-panel-title>
@@ -41,7 +42,9 @@
         <mat-panel-description>
           Language: {{shows.language}}
         </mat-panel-description>
+        <img src={{shows.image}} alt="image">
       </mat-expansion-panel-header>
-      <p>Summary: {{shows.summary}}</p>
+      Summary: {{shows.summary}}
     </mat-expansion-panel>
+  <!-- </div> -->
 

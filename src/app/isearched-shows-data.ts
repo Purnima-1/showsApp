@@ -1,5 +1,6 @@
 export interface ISearchedShowsData {
-   show:{
+    
+   
        name:string,
        language: string,
        rating:{
@@ -17,5 +18,5 @@ export interface ISearchedShowsData {
     //        time: string,
     //        days: []
     //    }
-   }
+   
 }
