@@ -1,7 +1,8 @@
 export interface ISearchedShowsData {
     
    
-       show:{name:string,
+       show:{
+           name:string,
        language: string,
        rating:{
         average: number

@@ -12,8 +12,28 @@
   overflow: hidden;
   
 }
+img{
+  
+}
 
 
 .content{
   padding:16px;
 }
+.mat-elevation-z4{
+  height: 350px;
+  background-color: blueviolet;
+}
+.display{
+  height: 250px;
+  width: 160px;
+ 
+}
+
+.card:hover{
+  transform: scale(1.05);
+}
+.row{
+  display: flex;
+}
+

@@ -1,7 +1,7 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { ISearchedShows } from '../isearched-shows';
 import { SearchedShowService } from '../searched-show.service';
-import { FormControl } from '@angular/forms';
+
 
 
 @Component({
@@ -10,7 +10,7 @@ import { FormControl } from '@angular/forms';
   styleUrls: ['./searched-shows.component.css']
 })
 export class SearchedShowsComponent implements OnInit {
-  search = new FormControl();
+  
   shows: ISearchedShows[]
   // panelOpenState = false;
   

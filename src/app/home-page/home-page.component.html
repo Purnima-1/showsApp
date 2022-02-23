@@ -1,20 +1,45 @@
-<div class="container-fluid">
-  <img src="../assets/images/pic.jpg" class="image" alt="cover" />
-
-  <div class="content">
-    <div fxLayout="row wrap" fxLayoutGap="16px">
-      <div fxFlex="25%" fsFlex.xs="100%" fsFlex.sm="33%" >
-        
-      
-    <mat-card class="mat-elevation-z4">
+<!-- <div class="container" >
+   <img src="../assets/images/pic.jpg" class="image" alt="cover" />
+    <div  fxLayoutGap="16px">
+      <div fxFlex="25%" fsFlex.xs="100%" fsFlex.sm="33%" > 
+      <div class="row">  
+     <div class="container"  *ngFor = "let item of shows.slice(0,5)">
+    <mat-card  class="card">
       <mat-card-header>
-        <mat-card-title>}</mat-card-title>
+        <mat-card-title>{{item.name}}</mat-card-title>
+        <img class= "display"src={{item.image}} alt="">
       </mat-card-header>
-      <img mat-card-image src="../../assets/images/pic1.jpg" />
+       <img mat-card-image src="../../assets/images/pic1.jpg" /> 
     </mat-card>
   </div>
 </div>
-</div>
+  </div>
+ </div>
 </div> -->
+
+<div
+  fxFlex
+  fxLayoutAlign="center"
+  class="container my-4"
+  
+  style="width: 100vw;">
+
+  <div fxLayout="row wrap" fxLayoutGap="1em grid">
+    <div
+      fxFlex="20%"
+      fxFlex.xs="100%"
+      fxFlex.sm="50%"
+      fxFlex.md="33%"
+      *ngFor="let item of shows.slice(0,5)"
+      id="card-container">
+
+    <mat-card class="mat-elevation-z4">
+      
+        <mat-card-header>
+            <mat-card-title style="width: 100%" id="show-title">{{ item.name }}</mat-card-title>
+        </mat-card-header>
+            <img mat-card-image style="width: 90%" src="{{ item.image }}"  />
+    </mat-card> 
+
 
 
