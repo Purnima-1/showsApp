@@ -7,6 +7,7 @@ import { SearchedShowsComponent } from './searched-shows/searched-shows.componen
 import { HeaderComponent } from './header/header.component';
 import { HttpClientModule } from '@angular/common/http';
 import { HomePageComponent } from './home-page/home-page.component'
+import { NavbarComponent } from './navbar/navbar.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations'
 import { MatExpansionModule } from '@angular/material/expansion';
 import { MatButtonModule } from '@angular/material/button';
@@ -15,12 +16,16 @@ import { MatCardModule } from '@angular/material/card';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatIconModule } from '@angular/material/icon';
+import { MatInputModule } from '@angular/material/input'
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+
 @NgModule({
   declarations: [
     AppComponent,
     SearchedShowsComponent,
     HeaderComponent,
-    HomePageComponent
+    HomePageComponent,
+    NavbarComponent
   ],
   imports: [
     BrowserModule,
@@ -33,7 +38,10 @@ import { MatIconModule } from '@angular/material/icon';
   MatCardModule,
   MatToolbarModule,
   MatIconModule,
-  FlexLayoutModule
+  FlexLayoutModule,
+  FormsModule,
+  ReactiveFormsModule,
+  MatInputModule
   ],
   providers: [],
   bootstrap: [AppComponent]

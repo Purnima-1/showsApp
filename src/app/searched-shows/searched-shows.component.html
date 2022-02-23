@@ -1,57 +1,23 @@
-<!-- <div class="container display">
 
-  <div class="accordion"  id="accordionExample" >
-    <div *ngFor="let show of shows" class="accordion-item">
-      <h2 class="accordion-header" id="headingOne">
-        <button
-          class="accordion-button"
-          type="button"
-         
-          data-bs-toggle="collapse"
-          data-bs-target="#collapseOne"
-          aria-expanded="true"
-          aria-controls="collapseOne"
-          style="color: blank"
-        >
-           <h5> {{ show.name }} </h5> 
-           
-          
-        </button>
-      </h2>
-      <div
-        id="collapseOne"
-        class="accordion-collapse collapse"
-        aria-labelledby="headingOne"
-        data-bs-parent="#accordionExample"
-      >
-        <div class="container"><h5 class="accordion-body">Airs at: {{ show.schedule }}</h5>
-        <p>Language: {{show.language}}</p> </div>
-      </div>
-    </div>
-  </div>
-</div>
- -->
-
-  <!-- <mat-accordion *ngFor="let show of shows"> -->
-    <div *ngFor = "let elem of shows">
-    <mat-expansion-panel hideToggle>
-      <mat-expansion-panel-header>
-        <mat-panel-title>
-          Name of Show: {{elem.name}}
+    
+    <div class ="container my-2" *ngFor = "let elem of shows">
+    <mat-expansion-panel class="heading" hideToggle>
+      <mat-expansion-panel-header >
+        <mat-panel-title class="name">
+          {{elem.name}}
         </mat-panel-title>
         <mat-panel-description>
         </mat-panel-description>
         
       </mat-expansion-panel-header>
-      
-        <img src={{elem.image}} alt="image">
-      
+      <div class = "detail">
+      <img class="image" src={{elem.image}} alt="show-image">
       <mat-card class="card">
-        Language: {{elem.language}}<br>
-        Summary: {{elem.summary}}<br>
+        Language: {{elem.language}}<br><br>
+        Summary: {{elem.summary}}<br><br>
         Rating: {{elem.rating}}
       </mat-card>
-      
-    </mat-expansion-panel>
+    </div>
+       </mat-expansion-panel>
   </div>
 

@@ -1,15 +1,8 @@
 /* You can add global styles to this file, and also import other style files */
-.display{
-   
-    width: 110vw;
-    /* display: flex; */
-    /* flex: auto; */
-    align-items: stretch;
-     align-items: baseline;
-    /* margin-bottom: 20px; */
-    /* margin-top: 0; */
-    
-    }
-    
-html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+/* html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; } */
+body{
+    background-color: rgb(172, 243, 172);
+        
+      
+}
