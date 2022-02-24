@@ -12,7 +12,10 @@ export class HomePageComponent implements OnInit {
   constructor(private homePageService: HomePageService) { 
     this.shows = [{ 
       name: "",
-      image: ""
+      image: "",
+      // genres: [],
+      // schedule: "",
+      // network:""
       
     }]
   }

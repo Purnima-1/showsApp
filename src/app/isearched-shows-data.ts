@@ -4,6 +4,7 @@ export interface ISearchedShowsData {
        show:{
            name:string,
        language: string,
+       genres: [],
        rating:{
         average: number
        } ,
@@ -13,11 +14,13 @@ export interface ISearchedShowsData {
        summary: string,
        network: {
            name:string
-       }}
-        //genres: []
-    //    schedule: {
-    //        time: string,
-    //        days: []
-    //    }
+       },
+       schedule: {
+        time: string,
+        days: []
+    }
+    }
+    
+       
    
 }

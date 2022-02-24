@@ -1,31 +1,10 @@
-<!-- <div class="container" >
-   <img src="../assets/images/pic.jpg" class="image" alt="cover" />
-    <div  fxLayoutGap="16px">
-      <div fxFlex="25%" fsFlex.xs="100%" fsFlex.sm="33%" > 
-      <div class="row">  
-     <div class="container"  *ngFor = "let item of shows.slice(0,5)">
-    <mat-card  class="card">
-      <mat-card-header>
-        <mat-card-title>{{item.name}}</mat-card-title>
-        <img class= "display"src={{item.image}} alt="">
-      </mat-card-header>
-       <img mat-card-image src="../../assets/images/pic1.jpg" /> 
-    </mat-card>
-  </div>
-</div>
-  </div>
- </div>
-</div> -->
-
-<div
+<div 
   fxFlex
   fxLayoutAlign="center"
-  class="container my-4"
-  
-  style="width: 100vw;">
+  class="container my-4">
 
-  <div fxLayout="row wrap" fxLayoutGap="1em grid">
-    <div
+  <div fxLayout="row wrap" fxLayoutGap="2em grid" >
+    <div class="box"
       fxFlex="20%"
       fxFlex.xs="100%"
       fxFlex.sm="50%"
@@ -40,6 +19,28 @@
         </mat-card-header>
             <img mat-card-image style="width: 90%" src="{{ item.image }}"  />
     </mat-card> 
+  <mat-expansion-panel class="panel">
+    <mat-expansion-panel-header >
+      <mat-panel-title class="name">
+        Get Details...
+      </mat-panel-title>
+      <mat-panel-description>
+      </mat-panel-description>
+      
+    </mat-expansion-panel-header>
+    <div class = "detail">
+    <img class="image" src="" alt="show-image">
+    <mat-card class="card">
+      Language: <br>
+      Broadcast on:<br>
+      Airs at: <br>
+      Genres: 
+    </mat-card>
+  </div>
+     </mat-expansion-panel>
+  </div>
+</div>
+</div>
 
 
 

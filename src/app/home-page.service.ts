@@ -25,7 +25,9 @@ export class HomePageService {
    private transformToIHomePage(shows:IHomePageData){
      return {
        name: shows.show.name,
-       image: this.getImage(shows.show.image)
+       image: this.getImage(shows.show.image),
+      //  genres: shows.show.genres,
+      //  schedule: shows.show.schedule.time,
      }
    }
 }

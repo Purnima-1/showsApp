@@ -22,8 +22,14 @@ export class SearchedShowService {
   let isImage;
 
   return (isImage = image
-    ? image.medium
+    ? image.medium 
     : 'http://static.tvmaze.com/images/no-img/no-img-portrait-text.png');
+    
+}
+
+private isNull(item:any) {
+  let notNull;
+  return (notNull = item ? item.name : null);
 }
 
 
@@ -31,13 +37,14 @@ private transformToISearchedShows(shows:ISearchedShowsData){
   return  {
     name:  shows.show.name,
     language: shows.show.language,
-    // genres: data.show.genres,
-    // // schedule: data.show.schedule.days,
+    genres: shows.show.genres,
+     schedule: shows.show.schedule.time,
+     
     rating: shows.show.rating.average,
     image: this.getImage(shows.show.image),
-    // image: shows.show.image.medium,
-    summary: shows.show.summary
-    // network: data.show.network.name
+    
+    summary: shows.show.summary,
+    network: this.isNull(shows.show.network)
       }
 }
 }
