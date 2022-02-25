@@ -4,13 +4,14 @@ show: {
   image: {
     medium: string | any
 }
-// network: {
-//   name:string
-// },
-// schedule: {
-//   time: string,
-//   days: []
-// }
-// genres: []
+network: {
+  name:string
+ }
+ language:string
+ genres: []
+schedule: {
+  time: string,
+  days: []
+ }
 }
 }

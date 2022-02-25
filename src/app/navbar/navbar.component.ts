@@ -1,5 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, EventEmitter, OnInit,Output } from '@angular/core';
 import { FormControl } from '@angular/forms';
+import { debounceTime } from 'rxjs';
+import { LoaderService } from '../loader/loader.service';
 
 @Component({
   selector: 'app-navbar',
@@ -7,10 +9,12 @@ import { FormControl } from '@angular/forms';
   styleUrls: ['./navbar.component.css']
 })
 export class NavbarComponent implements OnInit {
+
   search = new FormControl();
-  constructor() { }
+  constructor(public loaderService: LoaderService) { }
 
   ngOnInit(): void {
+   
   }
 
 }

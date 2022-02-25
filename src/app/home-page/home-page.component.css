@@ -40,10 +40,19 @@ img{
   transform: scale(1.07);
 }
 .card{
-  background-color: rgb(238, 184, 184);
+  background-color: blueviolet;
+  font-family: 'Redressed', cursive;
   
 }
 .panel{
-  background-color: rgb(248, 237, 237);
+  background-color:green;
+}
+.name{
+  font-family: 'Lobster', cursive;
+  color: white;
+  
+}
+#show-title{
+  font-family: 'Redressed', cursive;
 }
 

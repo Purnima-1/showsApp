@@ -20,12 +20,9 @@ export class SearchedShowService {
  }
  private getImage(image: any) {
   let isImage;
-
-  return (isImage = image
-    ? image.medium 
+  return (isImage = image ? image.medium 
     : 'http://static.tvmaze.com/images/no-img/no-img-portrait-text.png');
-    
-}
+   }
 
 private isNull(item:any) {
   let notNull;
@@ -39,10 +36,8 @@ private transformToISearchedShows(shows:ISearchedShowsData){
     language: shows.show.language,
     genres: shows.show.genres,
      schedule: shows.show.schedule.time,
-     
-    rating: shows.show.rating.average,
+     rating: shows.show.rating.average,
     image: this.getImage(shows.show.image),
-    
     summary: shows.show.summary,
     network: this.isNull(shows.show.network)
       }

@@ -2,8 +2,10 @@ export interface IHomePage {
 
     name: string
     image: string
-    // genres: []
-    // schedule: string
+     network: string
+     language: string
+     genres: []
+    schedule: string
     // network: string
     // schedule: { 
     //     time: number,

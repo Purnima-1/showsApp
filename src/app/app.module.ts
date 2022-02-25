@@ -4,8 +4,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { SearchedShowsComponent } from './searched-shows/searched-shows.component';
-import { HeaderComponent } from './header/header.component';
-import { HttpClientModule } from '@angular/common/http';
+import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { HomePageComponent } from './home-page/home-page.component'
 import { NavbarComponent } from './navbar/navbar.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations'
@@ -18,12 +17,13 @@ import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatIconModule } from '@angular/material/icon';
 import { MatInputModule } from '@angular/material/input'
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { MatProgressSpinnerModule } from '@angular/material/progress-spinner'
+import { InterceptorService } from './loader/interceptor.service';
 
 @NgModule({
   declarations: [
     AppComponent,
     SearchedShowsComponent,
-    HeaderComponent,
     HomePageComponent,
     NavbarComponent
   ],
@@ -41,9 +41,12 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
   FlexLayoutModule,
   FormsModule,
   ReactiveFormsModule,
-  MatInputModule
+  MatInputModule,
+  MatProgressSpinnerModule
   ],
-  providers: [],
+  providers: [
+    {provide: HTTP_INTERCEPTORS,useClass: InterceptorService,multi:true}
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

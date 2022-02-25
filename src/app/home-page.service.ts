@@ -14,20 +14,23 @@ export class HomePageService {
       return data.map((show)=> {return this.transformToIHomePage(show)})}))
    }
    private getImage(image: any) {
-    let isImage;
-  
-    return (isImage = image
-      ? image.medium
+    //let isImage; 
+    return (image ? image.medium
       : 'http://static.tvmaze.com/images/no-img/no-img-portrait-text.png');
   }
+  private isNull(item:any) {
+    //let notNull;
+    return (item ? item.name : null);
+  }  
   
-
    private transformToIHomePage(shows:IHomePageData){
      return {
        name: shows.show.name,
        image: this.getImage(shows.show.image),
-      //  genres: shows.show.genres,
-      //  schedule: shows.show.schedule.time,
+       network: this.isNull(shows.show.network),
+       language: shows.show.language,
+       genres: shows.show.genres,
+         schedule: shows.show.schedule.time,
      }
    }
 }

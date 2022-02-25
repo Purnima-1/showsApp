@@ -1,42 +1,19 @@
 <mat-toolbar class="toolbar">
-    
 
-    <mat-icon matPrefix></mat-icon>
-    <h1 class = "heading">Showflix</h1>
-    
+  <svg xmlns="http://www.w3.org/2000/svg" height="30" viewBox="0 0 24 24" width="30"><path d="M0 0h24v24H0z" fill="grey"/><path d="M21 3H3c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h5v2h8v-2h5c1.1 0 1.99-.9 1.99-2L23 5c0-1.1-.9-2-2-2zm0 14H3V5h18v12z"/></svg>
+    <h1 class = "mx-2 heading">Showflix</h1>
+    <div class="mx-5">
     <mat-form-field>
         <mat-label>Find your favorite shows</mat-label>
-        <mat-icon matPrefix></mat-icon>
-        <input matInput aria-label="City or Zip" [formControl] = "search">
+        <mat-icon class="search" matPrefix>search</mat-icon>
+        <input class="input" matInput aria-label="City or Zip" [formControl] = "search">
     </mat-form-field>
-
+  </div>
 </mat-toolbar>
+<div *ngIf="loaderService.isLoading | async" class= "loader">
+<mat-progress-spinner mode="indeterminate"></mat-progress-spinner>
+</div>
 
 
-<!-- <div class="flex-container" style="width: 100vw;">
-    <div class="title">
-      <span class="material-icons" >
-        theaters
-        </span>
-      <span id="title-text">
-       <h1>ShowFlix</h1>
-      </span>
-    </div>
-  
-    <div class="search-form">
-      <form class="example-form">
-        <mat-form-field class="search-field">
-          <input class="search-input"
-            
-            placeholder="Find your favorite shows!"
-            aria-label="Find your favorite shows!"
-          />
-        </mat-form-field>
-        <button mat-icon-button aria-label="search icon">
-          <mat-icon>search</mat-icon>
-        </button>
-      </form>
-  
-     -->
     
    

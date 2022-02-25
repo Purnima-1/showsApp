@@ -13,9 +13,10 @@ export class HomePageComponent implements OnInit {
     this.shows = [{ 
       name: "",
       image: "",
-      // genres: [],
-      // schedule: "",
-      // network:""
+      language: "",
+      genres: [],
+      schedule: "",
+      network:""
       
     }]
   }
