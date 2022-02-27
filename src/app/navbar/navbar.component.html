@@ -1,17 +1,22 @@
 <mat-toolbar class="toolbar">
 
   <svg xmlns="http://www.w3.org/2000/svg" height="30" viewBox="0 0 24 24" width="30"><path d="M0 0h24v24H0z" fill="grey"/><path d="M21 3H3c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h5v2h8v-2h5c1.1 0 1.99-.9 1.99-2L23 5c0-1.1-.9-2-2-2zm0 14H3V5h18v12z"/></svg>
-    <h1 class = "mx-2 heading">Showflix</h1>
+  
+     <h1 class = "mx-2 heading">ShowFlix</h1>
+    
     <div class="mx-5">
     <mat-form-field>
         <mat-label>Find your favorite shows</mat-label>
         <mat-icon class="search" matPrefix>search</mat-icon>
-        <input class="input" matInput aria-label="City or Zip" [formControl] = "search">
+        <input class="input" matInput aria-label="searchShow" [formControl] = "search">
+        
+        <mat-error *ngIf="search.invalid">Type 3 or more characters</mat-error>
+
     </mat-form-field>
   </div>
 </mat-toolbar>
 <div *ngIf="loaderService.isLoading | async" class= "loader">
-<mat-progress-spinner mode="indeterminate"></mat-progress-spinner>
+<mat-progress-spinner mode="indeterminate" ></mat-progress-spinner>
 </div>
 
 

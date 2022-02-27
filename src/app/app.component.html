@@ -1,7 +1,7 @@
 
-<app-navbar></app-navbar>
+<app-navbar  (searchEvent)="doSearch($event)"></app-navbar>
 
-<!-- <app-searched-shows ></app-searched-shows> -->
+<app-searched-shows [shows]="shows" ></app-searched-shows>
 
 <app-home-page></app-home-page>
 

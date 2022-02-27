@@ -9,17 +9,18 @@ import { IHomePageData } from './i-home-page-data';
 export class HomePageService {
 
   constructor(private httpClient: HttpClient) { }
-  displayShows(latest_Date: Date){
+  
+   displayShows(latest_Date: Date){
     return this.httpClient.get<IHomePageData[]>(`https://api.tvmaze.com/schedule?country=US&${latest_Date}`).pipe(map((data)=> {
       return data.map((show)=> {return this.transformToIHomePage(show)})}))
    }
+  
    private getImage(image: any) {
-    //let isImage; 
-    return (image ? image.medium
-      : 'http://static.tvmaze.com/images/no-img/no-img-portrait-text.png');
+        return (image ? image.medium
+       : 'http://static.tvmaze.com/images/no-img/no-img-portrait-text.png');
+      
   }
   private isNull(item:any) {
-    //let notNull;
     return (item ? item.name : null);
   }  
   

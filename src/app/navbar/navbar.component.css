@@ -8,8 +8,8 @@
         font-family: 'Dancing Script', cursive;
         font-weight: bold;
         font-size:xx-large;
-        color: darkgreen;
-    }
+        text-shadow: 2px 2px green;
+            }
     
     mat-label{
         font-family: 'Redressed', cursive;

@@ -10,7 +10,7 @@ import { SearchedShowService } from '../searched-show.service';
   styleUrls: ['./searched-shows.component.css']
 })
 export class SearchedShowsComponent implements OnInit {
-    shows: ISearchedShows[]
+    @Input() shows: ISearchedShows[]
     constructor(private searchedShowService: SearchedShowService) { 
     this.shows =[ { 
       name: "",
@@ -24,8 +24,7 @@ export class SearchedShowsComponent implements OnInit {
         }]
     }
   ngOnInit(): void {
-    this.searchedShowService.getShows('world')
-    // .subscribe(data => console.log(data))
-     .subscribe(data => this.shows = data)
+    // this.searchedShowService.getShows('world')
+    //  .subscribe(data => this.shows = data)
   }
 }
