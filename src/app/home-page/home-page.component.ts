@@ -1,4 +1,5 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, Input, OnInit, Output, EventEmitter } from '@angular/core';
+
 import { HomePageService } from '../home-page.service';
 import { IHomePage } from '../i-home-page';
 
@@ -24,8 +25,7 @@ export class HomePageComponent implements OnInit {
   ngOnInit(): void {
 
     this.homePageService.displayShows(new Date)
-    // .subscribe(data => console.log(data))
-     .subscribe(data => this.shows = data)
+         .subscribe(data => this.shows = data)
       }
-
+ 
 }

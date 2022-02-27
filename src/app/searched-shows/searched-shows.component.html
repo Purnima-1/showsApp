@@ -1,29 +1,26 @@
-
-    <!-- <div class="container">
-      <img src="../assets/images/pic.jpg" class="image" alt="cover" /> -->
-    
-    <div class ="container my-2" *ngFor = "let elem of shows">
+<div class="container my-2" *ngFor="let elem of shows">
+    <div *ngIf="!elem.name "></div>
+    <div *ngIf="elem.name ">
     <mat-expansion-panel class="heading" hideToggle>
-      <mat-expansion-panel-header >
+      <mat-expansion-panel-header>
         <mat-panel-title class="name">
-          {{elem.name}}
+          {{ elem.name }}
         </mat-panel-title>
-        <mat-panel-description>
-        </mat-panel-description>  
-        
+        <mat-panel-description> </mat-panel-description>
       </mat-expansion-panel-header>
-      <div class = "detail">
-      <img class="image" src={{elem.image}} alt="show-image">
-      <mat-card class="card">
-        Language: {{elem.language}}<br><br>
-        Summary: {{elem.summary}}<br><br>
-        Rating: {{elem.rating? elem.rating: "No Rating"}}<br>
-        Broadcast on: {{elem.network?elem.network:"Not Available"}} <br>
-        Airs at: {{elem.schedule? elem.schedule: "Not Available"}} <br>
-        Genres: {{elem.genres?elem.genres:"Fun Show"}}
-      </mat-card>
+      <div class="detail">
+        <img class="image" src="{{ elem.image }}" alt="show-image" />
+        <mat-card class="card">
+          Language: {{ elem.language }}<br /><br />
+          Summary: {{ elem.summary }}<br /><br />
+          Rating: {{ elem.rating ? elem.rating : "No Rating" }}<br />
+          Broadcast on: {{ elem.network ? elem.network : "Not Available" }}
+          <br />
+          Airs at: {{ elem.schedule ? elem.schedule : "Not Available" }} <br />
+          Genres: {{ elem.genres ? elem.genres : "Fun Show" }}
+        </mat-card>
+      </div>
+    </mat-expansion-panel>
     </div>
-       </mat-expansion-panel>
   </div>
-<!-- </div> -->
 

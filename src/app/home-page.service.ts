@@ -24,14 +24,14 @@ export class HomePageService {
     return (item ? item.name : null);
   }  
   
-   private transformToIHomePage(shows:IHomePageData){
+   private transformToIHomePage(homeshows:IHomePageData){
      return {
-       name: shows.show.name,
-       image: this.getImage(shows.show.image),
-       network: this.isNull(shows.show.network),
-       language: shows.show.language,
-       genres: shows.show.genres,
-         schedule: shows.show.schedule.time,
+       name: homeshows.show.name,
+       image: this.getImage(homeshows.show.image),
+       network: this.isNull(homeshows.show.network),
+       language: homeshows.show.language,
+       genres: homeshows.show.genres,
+         schedule: homeshows.show.schedule.time,
      }
    }
 }

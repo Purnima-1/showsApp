@@ -21,8 +21,9 @@ export class SearchedShowService {
  private getImage(image: any) {
   let isImage;
   return (isImage = image ? image.medium 
-    : 'http://static.tvmaze.com/images/no-img/no-img-portrait-text.png');
-   }
+    : '../assets/images/null_image.png'
+    // : 'http://static.tvmaze.com/images/no-img/no-img-portrait-text.png'
+    )}
 
 private isNull(item:any) {
   let notNull;

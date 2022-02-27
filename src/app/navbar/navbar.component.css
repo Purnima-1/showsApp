@@ -9,6 +9,7 @@
         font-weight: bold;
         font-size:xx-large;
         text-shadow: 2px 2px green;
+        
             }
     
     mat-label{
@@ -20,4 +21,7 @@
         z-index: 99;
         margin-top: 200px;
         margin-left: 600px;
+    }
+    .heading:hover{
+        cursor: pointer;
     }

@@ -19,12 +19,13 @@ export class AppComponent {
      genres: [],
      schedule: "",
       }]
-constructor(private searchedShowService: SearchedShowService){}
+constructor(private searchedShowService: SearchedShowService,){}
   doSearch(searchValue:string){
     const userInput = searchValue.split(',').map(s=> s.trim())
     this.searchedShowService.getShows(userInput[0])
     .subscribe(data => this.shows = data)
   }
+  
 
 
 } 

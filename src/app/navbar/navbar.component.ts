@@ -10,7 +10,10 @@ import { LoaderService } from '../loader/loader.service';
 })
 export class NavbarComponent implements OnInit {
  @Output() searchEvent = new EventEmitter<string>();
-  search = new FormControl('', [Validators.minLength(3)]);
+  search = new FormControl('', [Validators.minLength(2)]);
+  refreshPage(){
+    window.location.reload();
+  }
   constructor(public loaderService: LoaderService) { }
 
   ngOnInit(): void {
