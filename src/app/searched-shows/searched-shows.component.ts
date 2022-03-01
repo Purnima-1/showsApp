@@ -2,8 +2,6 @@ import { Component, Input, OnInit } from '@angular/core';
 import { ISearchedShows } from '../isearched-shows';
 import { SearchedShowService } from '../searched-show.service';
 
-
-
 @Component({
   selector: 'app-searched-shows',
   templateUrl: './searched-shows.component.html',

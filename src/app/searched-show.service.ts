@@ -29,8 +29,6 @@ private isNull(item:any) {
   let notNull;
   return (notNull = item ? item.name : null);
 }
-
-
 private transformToISearchedShows(shows:ISearchedShowsData){
   return  {
     name:  shows.show.name,
