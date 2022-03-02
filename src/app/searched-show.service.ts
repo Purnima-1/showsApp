@@ -29,15 +29,21 @@ private isNull(item:any) {
   let notNull;
   return (notNull = item ? item.name : null);
 }
+
+private summ(item:any){
+    return item.replace('<p>', '').replace('</p>','')
+  }
+
 private transformToISearchedShows(shows:ISearchedShowsData){
   return  {
     name:  shows.show.name,
     language: shows.show.language,
-    genres: shows.show.genres,
+    genres: shows.show.genres, 
      schedule: shows.show.schedule.time,
      rating: shows.show.rating.average,
     image: this.getImage(shows.show.image),
-    summary: shows.show.summary,
+    summary: this.summ(shows.show.summary),
+    // summary: shows.show.summary,
     network: this.isNull(shows.show.network)
       }
 }
