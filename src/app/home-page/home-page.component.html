@@ -1,46 +1,40 @@
-<div 
-  fxFlex
-  fxLayoutAlign="center"
-  class="container my-4">
-
-  <div fxLayout="row wrap" fxLayoutGap="2em grid" >
-    <div class="box" 
+<div fxFlex fxLayoutAlign="center" class="container my-4">
+  <div fxLayout="row wrap" fxLayoutGap="2em grid">
+    <div
+      class="box"
       fxFlex="20%"
       fxFlex.xs="100%"
       fxFlex.sm="50%"
       fxFlex.md="33%"
-      *ngFor="let item of shows.slice(0,5)"
-      id="card-container">
-
-    <mat-card class="mat-elevation-z4">
-      
+      *ngFor="let item of shows.slice(0, 5)"
+      id="card-container"
+    >
+      <mat-card class="mat-elevation-z4">
         <mat-card-header>
-            <mat-card-title style="width: 100%" id="show-title">{{ item.name }}</mat-card-title>
+          <mat-card-title style="width: 100%" id="show-title">{{
+            item.name
+          }}</mat-card-title>
         </mat-card-header>
-            <img mat-card-image style="width: 90%" src="{{ item.image }}"  />
-    </mat-card> 
-  <mat-expansion-panel class="panel">
-    <mat-expansion-panel-header >
-      <mat-panel-title class="name">
-        Get Details...
-      </mat-panel-title>
-      <mat-panel-description>
-      </mat-panel-description>
-      
-    </mat-expansion-panel-header>
-    <div class = "detail">
-    <img class="image" src="" alt="show-image">
-    <mat-card class="card">
-      Language: {{item.language}}<br>
-      Broadcast on: {{item.network}}<br>
-      Airs at: {{item.schedule}}<br>
-      Genres: {{item.genres}}
-    </mat-card>
+        <img mat-card-image style="width: 90%" src="{{ item.image }}" />
+      </mat-card>
+      <mat-expansion-panel class="panel">
+        <mat-expansion-panel-header>
+          <mat-panel-title class="name"> Get Details... </mat-panel-title>
+          <mat-panel-description> </mat-panel-description>
+        </mat-expansion-panel-header>
+        <div class="detail">
+          <img class="image" src="" alt="show-image" />
+          <mat-card class="card">
+            Language: {{ item.language }}<br />
+            Broadcast on: {{ item.network }}<br />
+            Airs at: {{ item.schedule }}<br />
+            Genres: {{ item.genres }}
+          </mat-card>
+        </div>
+      </mat-expansion-panel>
+    </div>
   </div>
-     </mat-expansion-panel>
-  </div>
+  <footer>
+    <h2 class="footer">&copy;Created By Purnima, Michaela and Rustam - 2022</h2>
+  </footer>
 </div>
-</div>
-
-
-

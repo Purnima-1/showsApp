@@ -56,3 +56,16 @@ img{
   font-family: 'Redressed', cursive;
 }
 
+.footer {
+     
+    position:fixed;
+    left:0px;
+    bottom:40px;
+    text-align: center;
+    z-index:-1;
+    height:30px;
+    width:100%;
+    background-color: bisque;
+    font-family: 'Lobster', cursive;
+    color: purple;
+    }
